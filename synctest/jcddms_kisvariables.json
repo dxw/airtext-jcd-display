@@ -1,0 +1,16 @@
+{
+  "kis_variables": {
+    "display_unit_id": "PANDU00073160",
+    "frame_id": "PANFR18049142",
+    "frame_code": "Temp_frame_004",
+    "player_id": "00-05-b7-ec-39-98",
+    "frame_resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "frame_coordinates": {
+      "latitude": "54.23",
+      "longitude": "5.29"
+    }
+  }
+}

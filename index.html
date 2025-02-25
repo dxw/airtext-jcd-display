@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air pollution display</title>
+    <link rel="stylesheet" type="text/css" href="build/css/style.css" />
+    <script type="text/javascript" src="build/js/script.js"></script>
+  </head>
+
+  <script id="alert-template" type="text/x-handlebars-template">
+    <div id="hero-block">
+      <img src="images/warning_triangle_filled.svg">
+      <span>Air pollution is</span>
+      <div id="alert-block" class="{{forecast.air_pollution.total}}">
+        <div id="alert-status">{{alert_status}} {{forecast.date}}</div>
+        <div id="alert-index">Index<br>{{forecast.air_pollution.total}}/10</div>
+      </div>
+      <span>in {{forecast.zone.name}}</span>
+    </div>
+
+    <div id="info-block">
+      {{#each guidance_blocks}}
+        <div class="guidance-block">
+          {{#each this.icons}}
+            <div class="guidance-icons">
+              <img src="images/pictograms/{{this}}.svg" alt="icon">
+            </div>
+          {{/each}}
+          <div class="guidance-text">
+            <p>{{{this.html}}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+    <div id="pre-footer" class="<%= @color_mode %>">
+      <p>Find out more about air pollution!</p>
+      <canvas id="qr-code" data-url="https://airtext.info"></canvas>
+    </div>
+  </script>
+
+  <body>
+    <main>
+      
+    </main>
+
+    <footer>
+      <div id="airtext-logo-block" class="black-white">
+        <img src="images/logo.svg">
+      </div>
+      <div id="partner-logo-block" class="black-white">
+        <img src="images/logos/southwark.svg">
+        <img src="images/logos/lambeth.svg">
+        <img src="images/logos/defra.svg">
+      </div>
+    </footer>    
+  </body>
+</html>
