@@ -1,0 +1,62 @@
+@use "variables";
+@use "reset";
+@use "daqi-levels";
+@use "alert-style";
+@use "info-style";
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+  }
+
+  footer {
+    display: flex;
+    height: 9cqh;
+    max-height: 500px;
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: calc(var(--unit) * 0.5);
+      box-sizing: border-box;
+    }
+
+    #airtext-logo-block {
+      background: var(--main-colour-700);
+      padding: calc(var(--unit) * 0.25) calc(var(--unit) * 1);
+      flex: 1;
+
+      &.black-white {
+        background: rgb(0 0 0 / 65%);
+      }
+    }
+
+    #partner-logo-block {
+      background: var(--main-colour-400);
+      padding: calc(var(--unit) * 0.25) calc(var(--unit) * 0.5);
+      flex: 3;
+
+      &.black-white {
+        background: rgb(0 0 0 / 25%);
+      }
+    }
+
+    img {
+      max-height: 65%;
+      max-width: 100%;
+    }
+  }
+}

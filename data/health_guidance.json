@@ -1,0 +1,134 @@
+{
+  "air_pollution": {
+    "low": [
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>At-risk individuals and general population</strong> should enjoy their usual outdoor activities."
+      }
+    ],
+    "moderate": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should consider reducing strenuous physical activity, particularly outdoors.."
+      },
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+      }
+    ],
+    "high": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors"
+      },
+      {
+        "icons": ["asthma"],
+        "html": "<strong>People with asthma</strong> may need to use their reliever inhaler more often."
+      },
+      {
+        "icons": ["no-exercise"],
+        "html": "<strong>Older people</strong> should reduce physical exertion."
+      },
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Anyone from general population experiencing discomfort such as sore eyes, cough or sore throat</strong> should consider reducing activity, particularly outdoors."
+      }
+    ],
+    "very_high": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors"
+      },
+      {
+        "icons": ["asthma"],
+        "html": "<strong>People with asthma</strong> may need to use their reliever inhaler more often."
+      },
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>General population</strong> should reduce physical exertion, particularly outdoors, <strong>especially if experiencing cough or sore throat symptoms</strong>."
+      }
+    ]
+  },
+  "pollen": {
+    "low": [
+      {
+        "icons": [],
+        "html": "<strong>Individuals suffering hay fever or allergies</strong> should enjoy their usual outdoor activities."
+      }
+    ],
+    "moderate": [
+      {
+        "icons": [],
+        "html": "<strong>Individuals suffering hay fever or allergies</strong> should stay indoors with doors and windows shut, if possible."
+      }
+    ],
+    "high": [
+      {
+        "icons": [],
+        "html": "<strong>Individuals suffering hay fever or allergies</strong> should stay indoors with doors and windows shut, if possible."
+      }
+    ],
+    "very_high": [
+      {
+        "icons": [],
+        "html": "<strong>Individuals suffering hay fever or allergies</strong> should stay indoors with doors and windows shut, if possible."
+      }
+    ]
+  },
+  "temperature": {
+    "low_temp": [
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>At-risk individuals and general population</strong> should enjoy their usual outdoor activities."
+      }
+    ],
+    "high_temp": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should consider reducing strenuous physical activity, particularly outdoors."
+      },
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+      }
+    ]
+  },
+  "uv": {
+    "low": [
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>At-risk individuals and general population</strong> should enjoy their usual outdoor activities."
+      }
+    ],
+    "moderate": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with skin problems and those with heart problems who experience symptoms</strong> should consider reducing strenuous physical activity, particularly outdoors."
+      },
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+      }
+    ],
+    "high": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with skin problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors."
+      },
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+      }
+    ],
+    "very_high": [
+      {
+        "icons": ["no-exercise", "no-outdoors"],
+        "html": "<strong>Adults and children with skin problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors."
+      },
+      {
+        "icons": ["outdoors"],
+        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "airtext-jcd-display",
+  "private": true,
+  "scripts": {
+    "lint:css": "npx stylelint \"source/**/*css\"",
+    "lint:css:fix": "npx stylelint \"source/**/*css\" --fix",
+    "lint:format": "prettier --check '**/*'",
+    "lint:format:fix": "prettier --write '**/*'",
+    "lint:js": "eslint .",
+    "lint:js:fix": "yarn run lint:js --fix",
+    "lint:all:fix": "yarn run lint:js:fix && yarn run lint:css:fix && yarn run lint:format:fix",
+    "build": "yarn run build:js && yarn run build:css",
+    "build:js": "esbuild source/js/script.js --bundle --sourcemap --format=esm --outfile=build/js/script.js",
+    "build:css": "sass source/css/style.scss build/css/style.css --style compressed"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.11.1",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "sass": "^1.85.1",
+    "prettier": "^3.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-scss": "^14.0.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

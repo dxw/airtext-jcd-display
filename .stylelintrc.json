@@ -1,0 +1,11 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-standard"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "no-descending-specificity": null,
+    "media-query-no-invalid": null,
+    "selector-class-pattern": null,
+    "scss/operator-no-newline-after": null,
+    "scss/at-extend-no-missing-placeholder": null
+  }
+}

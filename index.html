@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air pollution display</title>
+    <link rel="stylesheet" type="text/css" href="build/css/style.css" />
+    <script type="text/javascript" src="build/js/script.js"></script>
+  </head>
+
+  <script id="alert-template" type="text/x-handlebars-template">
+    <div class="alert-style">
+      <div id="hero-block">
+        <img src="images/warning_triangle_filled.svg" />
+        <span>Air pollution is</span>
+        <div id="alert-block" class="level-{{alert_label}}">
+          <div id="alert-primary">{{alert_label}} {{date}}</div>
+          <div id="alert-secondary">Index {{forecast.total}}/10</div>
+        </div>
+        <span>in {{zone}}</span>
+      </div>
+
+      <div id="info-block">
+        {{#each guidance_blocks}}
+          <div class="guidance-block">
+            {{#each this.icons}}
+              <div class="guidance-icons">
+                <img src="images/pictograms/{{this}}.svg" alt="icon" />
+              </div>
+            {{/each}}
+            <div class="guidance-text">
+              <p>{{{this.html}}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div id="cta-block">
+        <div id="cta-text-block">
+          <span id="cta-text">Check air pollution levels in your area</span>
+          <span id="cta-url">airtext.info/forecast</span>
+        </div>
+        <div id="qr-code-block" data-url="https://airtext.info"></div>
+      </div>
+    </div>
+  </script>
+
+  <script id="pollen-template" type="text/x-handlebars-template">
+    <div class="alert-style">
+      <div id="hero-block">
+        <img src="images/pollen.svg" />
+        <span>Pollen levels are</span>
+        <div id="alert-block" class="level-{{alert_label}}">
+          <div id="alert-primary">{{alert_label}} {{date}}</div>
+          <div id="alert-secondary">Grass, tree and weed grains</div>
+        </div>
+        <span>in {{zone}}</span>
+      </div>
+
+      <div id="info-block">
+        {{#each guidance_blocks}}
+          <div class="guidance-block">
+            {{#each this.icons}}
+              <div class="guidance-icons">
+                <img src="images/pictograms/{{this}}.svg" alt="icon" />
+              </div>
+            {{/each}}
+            <div class="guidance-text">
+              <p>{{{this.html}}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div id="cta-block">
+        <div id="cta-text-block">
+          <span id="cta-text">Check NHS recommendations for hay fever</span>
+          <span id="cta-url">airtext.info/forecast</span>
+        </div>
+        <div id="qr-code-block" data-url="https://airtext.info"></div>
+      </div>
+    </div>
+  </script>
+
+  <script id="info-template" type="text/x-handlebars-template">
+    <div class="info-style">
+      <div id="hero-block">
+        <div id="hero-text">Sign up now to
+          <em>free</em>
+          air quality alerts</div>
+        <div id="qr-code-block" data-url="https://airtext.info"></div>
+      </div>
+
+      <div id="info-block">
+        <ul>
+          <li>Check air quality in your area.</li>
+          <li>Get alerts for your areas of interest.</li>
+        </ul>
+      </div>
+
+      <div id="cta-block">
+        <div id="cta-text-block">
+          <span id="cta-url">airtext.info/forecast</span>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <body>
+    <main>
+      <!-- fallback content -->
+    </main>
+
+    <footer>
+      <div id="airtext-logo-block" class="{{color_mode}}">
+        <img src="images/logo.svg" />
+      </div>
+      <div id="partner-logo-block" class="{{color_mode}}">
+        <img src="images/logos/southwark.svg" />
+        <img src="images/logos/lambeth.svg" />
+        <img src="images/logos/defra.svg" />
+      </div>
+    </footer>
+  </body>
+</html>
