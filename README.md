@@ -38,6 +38,12 @@ To watch for changes in the JS files and compile them to a single JS file, run:
 $ yarn run build:js -- --watch
 ```
 
+`index.html` can be accessed directly in the browser, or you can run a local server:
+
+```bash
+$ yarn run serve
+```
+
 ### Linting
 
 There are various linters set up. To run them all with autofix, run:

@@ -12,7 +12,8 @@
     "heroku-prebuild": "scripts/set-api-key.sh",
     "build": "yarn run build:js && yarn run build:css",
     "build:js": "esbuild source/js/script.js --bundle --sourcemap --format=esm --outfile=build/js/script.js",
-    "build:css": "sass source/css/style.scss build/css/style.css --style compressed"
+    "build:css": "sass source/css/style.scss build/css/style.css --style compressed",
+    "serve": "npx -y http-server"
   },
   "dependencies": {
     "handlebars": "^4.7.8",
