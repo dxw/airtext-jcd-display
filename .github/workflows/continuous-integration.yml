@@ -1,0 +1,39 @@
+name: CI Checks
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+
+jobs:
+  lint-and-format:
+    name: Lint and format application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: yarn install
+      - name: Run ESLint
+        run: yarn run lint:js
+      - name: Run Stylelint
+        run: yarn run lint:css
+      - name: Run Prettier
+        run: yarn run lint:format
+
+  static-analysis:
+    name: Static analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Yarn audit
+        run: yarn audit
+
+  specs:
+    name: Specs and coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4

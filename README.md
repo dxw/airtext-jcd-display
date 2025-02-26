@@ -3,6 +3,7 @@
 This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed to be used with a JCDecaux display board, but can be used in any settings that supports HTML and JavaScript.
 
 There are three templates, each defined in `index.html` as a Handlebars template:
+
 - **Alert** - for air pollution and pollen alerts
 - **Info** - for general information
 
