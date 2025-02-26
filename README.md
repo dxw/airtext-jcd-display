@@ -13,7 +13,12 @@ Everything happens in the client. There is intentionally no server-side code bec
 
 ## Development
 
-Update `api-key.example.js` with your CERC Forecast API key and rename it to `api-key.js`.
+To set the API key, run:
+
+```
+export CERC_FORECAST_API_KEY="YOUR_API_KEY_HERE"
+scripts/set-api-key.sh
+```
 
 Install the dependencies:
 
@@ -43,9 +48,9 @@ $ yarn run lint:all:fix
 
 ## Deployment
 
-Update `api-key.example.js` with your CERC Forecast API key and rename it to `api-key.js`.
+Set the API key as an environment variable.
 
-Run
+Run the build script:
 
 ```bash
 $ yarn run build

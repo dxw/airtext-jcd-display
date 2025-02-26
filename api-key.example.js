@@ -1,1 +1,0 @@
-export const CERC_FORECAST_API_KEY = "SECRET_API_KEY";

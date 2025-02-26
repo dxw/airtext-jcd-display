@@ -9,6 +9,7 @@
     "lint:js": "eslint .",
     "lint:js:fix": "yarn run lint:js --fix",
     "lint:all:fix": "yarn run lint:js:fix && yarn run lint:css:fix && yarn run lint:format:fix",
+    "heroku-prebuild": "scripts/set-api-key.sh",
     "build": "yarn run build:js && yarn run build:css",
     "build:js": "esbuild source/js/script.js --bundle --sourcemap --format=esm --outfile=build/js/script.js",
     "build:css": "sass source/css/style.scss build/css/style.css --style compressed"
