@@ -41,3 +41,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+  shellcheck:
+    name: Lint scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Shellceck
+        run: |
+          for file in $(git ls-files scripts/*)
+          do shellcheck -x "$file"
+          done
