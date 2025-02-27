@@ -44,6 +44,14 @@ $ yarn run build:js -- --watch
 $ yarn run serve
 ```
 
+### Testing
+
+To run the tests with Playwright, run:
+
+```bash
+$ yarn run test
+```
+
 ### Linting
 
 There are various linters set up. To run them all with autofix, run:

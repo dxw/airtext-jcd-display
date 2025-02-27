@@ -1,0 +1,70 @@
+{
+  "forecastdate": "27-02-2025 10:52",
+  "timestamp": 1740653575521.2751,
+  "zones": [
+    {
+      "forecasts": [
+        {
+          "NO2": 1,
+          "O3": 2,
+          "PM10": 1,
+          "PM2.5": 1,
+          "forecast_date": "2024-12-11",
+          "non_pollution_version": null,
+          "pollen": -999,
+          "pollution_version": 202412101614,
+          "rain_am": 0.0,
+          "rain_pm": 0.0,
+          "temp_max": 7.4,
+          "temp_min": 5.5,
+          "total": 2,
+          "total_status": "LOW",
+          "uv": 1,
+          "wind_am": 4.6,
+          "wind_pm": 3.7
+        },
+        {
+          "NO2": 2,
+          "O3": 2,
+          "PM10": 2,
+          "PM2.5": 2,
+          "forecast_date": "2024-12-12",
+          "non_pollution_version": null,
+          "pollen": -999,
+          "pollution_version": 202412122009,
+          "rain_am": 0.02,
+          "rain_pm": 0.51,
+          "temp_max": 8.1,
+          "temp_min": 5.0,
+          "total": 2,
+          "total_status": "LOW",
+          "uv": 1,
+          "wind_am": 2.1,
+          "wind_pm": 2.1
+        },
+        {
+          "NO2": 2,
+          "O3": 1,
+          "PM10": 3,
+          "PM2.5": 3,
+          "forecast_date": "2024-12-13",
+          "non_pollution_version": null,
+          "pollen": -999,
+          "pollution_version": 202412132010,
+          "rain_am": 0.19,
+          "rain_pm": 0.09,
+          "temp_max": 7.2,
+          "temp_min": 3.9,
+          "total": 3,
+          "total_status": "LOW",
+          "uv": 1,
+          "wind_am": 2.1,
+          "wind_pm": 2.3
+        }
+      ],
+      "zone_id": 29,
+      "zone_name": "Southwark",
+      "zone_type": 1
+    }
+  ]
+}
