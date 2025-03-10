@@ -92,7 +92,7 @@ window.addEventListener("load", () => {
 
   function generateQRCode() {
     const qr_container = document.getElementById("qr-code-block");
-    const qr_url = qr_container.getAttribute("data-url");
+    const qr_url = "https://" + document.getElementById("cta-url").textContent;
     QRCode.toCanvas(
       qr_url,
       { errorCorrectionLevel: "H", margin: 0, width: 500, height: 500 },
