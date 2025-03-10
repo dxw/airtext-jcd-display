@@ -1,133 +1,81 @@
 {
   "air_pollution": {
-    "low": [
-      {
-        "icons": ["outdoors"],
-        "html": "<strong>At-risk individuals and general population</strong> should enjoy their usual outdoor activities."
-      }
-    ],
     "moderate": [
       {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should consider reducing strenuous physical activity, particularly outdoors.."
-      },
-      {
-        "icons": ["outdoors"],
-        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+        "icons": ["children", "lung-problems", "heart-problems"],
+        "html": "<strong>Don’t overdo it</strong> if you are an adult or child with a <strong>lung or heart problem</strong>."
       }
     ],
     "high": [
       {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors"
+        "icons": ["lung-problems"],
+        "html": "<strong>Take your inhaler with you</strong> if you have a respiratory condition. "
       },
       {
-        "icons": ["asthma"],
-        "html": "<strong>People with asthma</strong> may need to use their reliever inhaler more often."
+        "icons": ["children-lung-heart"],
+        "html": "<strong>Reduce hard physical activity</strong> if you are an adult or child with a lung or heart problem."
       },
       {
-        "icons": ["no-exercise"],
-        "html": "<strong>Older people</strong> should reduce physical exertion."
-      },
-      {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Anyone from general population experiencing discomfort such as sore eyes, cough or sore throat</strong> should consider reducing activity, particularly outdoors."
+        "icons": ["elderly"],
+        "html": "If you are older, <strong>reduce physical activity</strong>."
       }
     ],
     "very_high": [
       {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors"
+        "icons": ["lung-problems"],
+        "html": "<strong>Take your inhaler with you</strong> if you have a respiratory condition. "
       },
       {
-        "icons": ["asthma"],
-        "html": "<strong>People with asthma</strong> may need to use their reliever inhaler more often."
+        "icons": ["children-lung-heart-elderly"],
+        "html": "<strong>Avoid hard physical activity</strong> if you are older, have lung problems, or have heart problems."
       },
       {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>General population</strong> should reduce physical exertion, particularly outdoors, <strong>especially if experiencing cough or sore throat symptoms</strong>."
+        "icons": ["everyone"],
+        "html": "If you experience any symptoms, <strong>reduce your physical exertion</strong>."
       }
     ]
   },
   "pollen": {
-    "low": [
-      {
-        "icons": [],
-        "html": "<strong>Individuals suffering hay fever or allergies</strong> should enjoy their usual outdoor activities."
-      }
-    ],
     "moderate": [
       {
-        "icons": [],
-        "html": "<strong>Individuals suffering hay fever or allergies</strong> should stay indoors with doors and windows shut, if possible."
+        "icons": ["pharmacist"],
+        "html": "Ask a pharmacist about treatment."
+      },
+      {
+        "icons": ["stay-inside"],
+        "html": "Stay inside to reduce your exposure to pollen."
+      },
+      {
+        "icons": ["protective-clothing"],
+        "html": "Wear a face mask, wraparound glasses and change your clothes after being outside."
       }
     ],
     "high": [
       {
-        "icons": [],
-        "html": "<strong>Individuals suffering hay fever or allergies</strong> should stay indoors with doors and windows shut, if possible."
+        "icons": ["pharmacist"],
+        "html": "Ask a pharmacist about treatment."
+      },
+      {
+        "icons": ["stay-inside"],
+        "html": "Stay inside to reduce your exposure to pollen."
+      },
+      {
+        "icons": ["protective-clothing"],
+        "html": "Wear a face mask, wraparound glasses and change your clothes after being outside."
       }
     ],
     "very_high": [
       {
-        "icons": [],
-        "html": "<strong>Individuals suffering hay fever or allergies</strong> should stay indoors with doors and windows shut, if possible."
-      }
-    ]
-  },
-  "temperature": {
-    "low_temp": [
-      {
-        "icons": ["outdoors"],
-        "html": "<strong>At-risk individuals and general population</strong> should enjoy their usual outdoor activities."
-      }
-    ],
-    "high_temp": [
-      {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with lung problems and those with heart problems who experience symptoms</strong> should consider reducing strenuous physical activity, particularly outdoors."
+        "icons": ["pharmacist"],
+        "html": "Ask a pharmacist about treatment."
       },
       {
-        "icons": ["outdoors"],
-        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
-      }
-    ]
-  },
-  "uv": {
-    "low": [
-      {
-        "icons": ["outdoors"],
-        "html": "<strong>At-risk individuals and general population</strong> should enjoy their usual outdoor activities."
-      }
-    ],
-    "moderate": [
-      {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with skin problems and those with heart problems who experience symptoms</strong> should consider reducing strenuous physical activity, particularly outdoors."
+        "icons": ["stay-inside"],
+        "html": "Stay inside to reduce your exposure to pollen."
       },
       {
-        "icons": ["outdoors"],
-        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
-      }
-    ],
-    "high": [
-      {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with skin problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors."
-      },
-      {
-        "icons": ["outdoors"],
-        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
-      }
-    ],
-    "very_high": [
-      {
-        "icons": ["no-exercise", "no-outdoors"],
-        "html": "<strong>Adults and children with skin problems and those with heart problems who experience symptoms</strong> should avoid strenuous physical activity, particularly outdoors."
-      },
-      {
-        "icons": ["outdoors"],
-        "html": "<strong>General population</strong> could enjoy their usual outdoor activities."
+        "icons": ["protective-clothing"],
+        "html": "Wear a face mask, wraparound glasses and change your clothes after being outside."
       }
     ]
   }
