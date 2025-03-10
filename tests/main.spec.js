@@ -17,8 +17,10 @@ async function stubApiResponse(page, apiResponse) {
 }
 
 test.describe("index page", () => {
-  test.describe("when there is a air pollution alert", () => {
-    test("should render the air pollution alert template", async ({ page }) => {
+  test.describe("when there is an air pollution alert today", () => {
+    test("should render the air pollution alert today template", async ({
+      page,
+    }) => {
       const apiResponse = defaultApiResponse;
       apiResponse.zones[0].forecasts[0].total_status = "HIGH";
       apiResponse.zones[0].forecasts[0].total = 8;
@@ -27,6 +29,21 @@ test.describe("index page", () => {
       await page.goto("/");
       await page.waitForSelector("#hero-block");
       await expect(page.getByText("Air pollution is high today")).toBeVisible();
+    });
+  });
+
+  test.describe("when there is an air pollution alert tomorrow", () => {
+    test("should render the air pollution alert tomorrow template", async ({
+      page,
+    }) => {
+      const apiResponse = defaultApiResponse;
+      apiResponse.zones[0].forecasts[1].total_status = "HIGH";
+      apiResponse.zones[0].forecasts[1].total = 8;
+      await stubApiResponse(page, apiResponse);
+
+      await page.goto("/");
+      await page.waitForSelector("#hero-block");
+      await expect(page.getByText("will be high tomorrow")).toBeVisible();
     });
   });
 

@@ -45,6 +45,35 @@
     </div>
   </script>
 
+  <script id="air-pollution-alert-tomorrow-template" type="text/x-handlebars-template">
+    <div class="alert-style">
+      <div id="hero-block">
+        <img src="images/warning-triangle.svg" />
+        <span>Air pollution is</span>
+        <div id="alert-block" class="level-{{airPollutionLabelTodayClass}}">
+          <div id="alert-primary">{{airPollutionLabelToday}} today</div>
+          <div id="alert-secondary">Index {{forecastToday.total}}/10</div>
+        </div>
+      </div>
+      <div id="hero-block">
+        <span>but will be</span>
+        <div id="alert-block" class="level-{{airPollutionLabelTomorrowClass}}">
+          <div id="alert-primary">{{airPollutionLabelTomorrow}} tomorrow</div>
+          <div id="alert-secondary">Index {{forecastTomorrow.total}}/10</div>
+        </div>
+        <span>in {{zone}}</span>
+      </div>
+
+      <div id="cta-block">
+        <div id="cta-text-block">
+          <span id="cta-text">Find out how to protect yourself.</span>
+          <span id="cta-url">www.airtext.info</span>
+        </div>
+        <div id="qr-code-block"></div>
+      </div>
+    </div>
+  </script>
+
   <script id="pollen-alert-template" type="text/x-handlebars-template">
     <div class="alert-style">
       <div id="hero-block">

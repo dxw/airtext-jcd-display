@@ -56,6 +56,16 @@ window.addEventListener("load", () => {
       context.guidanceBlocks =
         guidanceBlocks.air_pollution[context.airPollutionLabelClass];
     }
+    if (template === "air-pollution-alert-tomorrow") {
+      context.airPollutionLabelToday =
+        context.forecastToday.total_status.toLowerCase();
+      context.airPollutionLabelTomorrow =
+        context.forecastTomorrow.total_status.toLowerCase();
+      context.airPollutionLabelTodayClass =
+        context.airPollutionLabelToday.replace(" ", "_");
+      context.airPollutionLabelTomorrowClass =
+        context.airPollutionLabelTomorrow.replace(" ", "_");
+    }
     if (template === "pollen-alert") {
       context.pollenLabel = pollenLabel(context.forecastToday.pollen);
       context.pollenLabelClass = context.pollenLabel.replace(" ", "_");
