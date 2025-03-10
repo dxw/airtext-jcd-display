@@ -1,14 +1,15 @@
-.level-high {
-  --daqi-main-color: #feda53;
-  --daqi-main-text: black;
-  --daqi-pale-color: #fef6cd;
+.level-high,
+.level-very_high {
+  --daqi-main-color: #e44c53;
+  --daqi-main-text: white;
+  --daqi-pale-color: #f8dfe0;
   --daqi-pale-text: black;
 }
 
 .level-moderate {
-  --daqi-main-color: #e44c53;
+  --daqi-main-color: #feda53;
   --daqi-main-text: black;
-  --daqi-pale-color: #f8dfe0;
+  --daqi-pale-color: #fef6cd;
   --daqi-pale-text: black;
 }
 
