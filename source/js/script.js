@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
 
       renderTemplate(settings.template, context);
     } else {
-      renderTemplate("info", {});
+      renderTemplate("subscription-actionable", {});
     }
     generateQRCode();
   });
@@ -31,20 +31,20 @@ window.addEventListener("load", () => {
     const forecast_tomorrow = forecasts[1];
 
     if (forecast_today.total_status !== "LOW") {
-      return { template: "alert", forecast: forecast_today };
+      return { template: "air-pollution-alert", forecast: forecast_today };
     } else if (forecast_tomorrow.total_status !== "LOW") {
-      return { template: "alert", forecast: forecast_tomorrow };
+      return { template: "air-pollution-alert", forecast: forecast_tomorrow };
     } else if (forecast_today.pollen >= 4 && forecast_today.pollen <= 6) {
-      return { template: "pollen", forecast: forecast_today };
+      return { template: "pollen-alert", forecast: forecast_today };
     } else if (forecast_today.pollen >= 7) {
-      return { template: "pollen", forecast: forecast_today };
+      return { template: "pollen-alert", forecast: forecast_today };
     } else {
-      return { template: "info", forecast: forecast_today };
+      return { template: "subscription-actionable", forecast: forecast_today };
     }
   }
 
   function setContext(context, settings) {
-    if (settings.template === "alert") {
+    if (settings.template === "air-pollution-alert") {
       context.airPollutionLabel = settings.forecast.total_status.toLowerCase();
       context.airPollutionLabelClass = context.airPollutionLabel.replace(
         " ",
@@ -53,7 +53,7 @@ window.addEventListener("load", () => {
       context.guidanceBlocks =
         guidanceBlocks.air_pollution[context.airPollutionLabelClass];
     }
-    if (settings.template === "pollen") {
+    if (settings.template === "pollen-alert") {
       context.pollenLabel = pollenLabel(settings.forecast.pollen);
       context.pollenLabelClass = context.pollenLabel.replace(" ", "_");
       context.guidanceBlocks = guidanceBlocks.pollen[context.pollenLabelClass];

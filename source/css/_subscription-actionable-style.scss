@@ -1,6 +1,6 @@
 @use "variables";
 
-.info-style {
+.subscription-actionable-style {
   padding: calc(var(--unit)) calc(var(--unit) * 0.75) calc(var(--unit) * 0.75);
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   #hero-block {
     color: var(--main-colour-700);
     display: flex;
-    gap: calc(var(--unit) * 0.25);
+    gap: calc(var(--unit) * 0.5);
 
     #hero-text {
       font-size: 6.5cqh;
