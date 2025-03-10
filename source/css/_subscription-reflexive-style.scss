@@ -1,0 +1,71 @@
+@use "variables";
+
+.subscription-reflexive-style {
+  padding: calc(var(--unit)) calc(var(--unit) * 0.75) calc(var(--unit) * 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  #hero-block {
+    color: var(--main-colour-700);
+    display: flex;
+    gap: calc(var(--unit) * 0.5);
+    margin-bottom: calc(var(--unit) * 0.75);
+
+    #hero-text {
+      font-size: 8cqh;
+      font-weight: bold;
+
+      em {
+        text-decoration: underline;
+        font-style: normal;
+      }
+    }
+  }
+
+  #info-block {
+    font-size: 7cqh;
+    line-height: 1.1;
+    color: var(--main-colour-500);
+    position: relative;
+    margin-bottom: calc(var(--unit) * 0.25);
+    flex-grow: 1;
+
+    em {
+      text-decoration: underline;
+      font-style: normal;
+    }
+
+    #channel-icons {
+      margin-top: calc(var(--unit) * 0.5);
+
+      img {
+        width: calc(var(--unit) * 1.25);
+        height: calc(var(--unit) * 1.25);
+      }
+    }
+
+    img.arrow {
+      position: absolute;
+      right: 0;
+      top: 4cqh; // ~half the height of the text
+      height: calc(100% - 4cqh);
+    }
+  }
+
+  #cta-block {
+    font-size: 3cqh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    #qr-code-block {
+      width: 12cqh;
+
+      canvas {
+        max-width: 100%;
+        height: auto !important;
+      }
+    }
+  }
+}
