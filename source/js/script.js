@@ -93,9 +93,20 @@ window.addEventListener("load", () => {
   function generateQRCode() {
     const qr_container = document.getElementById("qr-code-block");
     const qr_url = "https://" + document.getElementById("cta-url").textContent;
+    const color_mode =
+      document.getElementById("qr-code-block").dataset.colorMode || "light";
     QRCode.toCanvas(
       qr_url,
-      { errorCorrectionLevel: "H", margin: 0, width: 500, height: 500 },
+      {
+        errorCorrectionLevel: "H",
+        margin: 0,
+        width: 500,
+        height: 500,
+        color: {
+          dark: color_mode === "light" ? "#000000" : "#ffffff",
+          light: color_mode === "light" ? "#ffffff" : "#123257",
+        },
+      },
       function (err, canvas) {
         if (err) throw err;
         qr_container.appendChild(canvas);
