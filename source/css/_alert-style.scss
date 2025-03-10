@@ -51,14 +51,15 @@
 
     .guidance-block {
       display: flex;
-      gap: calc(var(--unit) / 2);
+      flex-wrap: wrap;
+      gap: calc(var(--unit) / 4);
 
       .guidance-icons {
         flex: 0;
 
         img {
-          width: calc(var(--unit) * 1.5);
-          height: calc(var(--unit) * 1.5);
+          width: calc(var(--unit) * 1.6);
+          height: calc(var(--unit) * 1.6);
         }
       }
 
@@ -88,12 +89,12 @@
       #cta-url {
         display: block;
         margin-top: 1cqh;
-        font-size: 2cqh;
+        font-size: 2.5cqh;
       }
     }
 
     #qr-code-block {
-      width: 15cqh;
+      width: 12cqh;
 
       canvas {
         max-width: 100%;
