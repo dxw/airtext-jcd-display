@@ -81,6 +81,10 @@
     border-top: 0.3cqh solid var(--main-colour-700);
 
     #cta-text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
       #cta-text {
         display: block;
         font-size: 2.5cqh;
