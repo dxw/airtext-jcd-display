@@ -46,11 +46,17 @@ window.addEventListener("load", () => {
   function setContext(context, settings) {
     if (settings.template === "alert") {
       context.airPollutionLabel = settings.forecast.total_status.toLowerCase();
-      context.guidanceBlocks = guidanceBlocks.pollen[context.airPollutionLabel];
+      context.airPollutionLabelClass = context.airPollutionLabel.replace(
+        " ",
+        "_",
+      );
+      context.guidanceBlocks =
+        guidanceBlocks.air_pollution[context.airPollutionLabelClass];
     }
     if (settings.template === "pollen") {
       context.pollenLabel = pollenLabel(settings.forecast.pollen);
-      context.guidanceBlocks = guidanceBlocks.pollen[context.pollenLabel];
+      context.pollenLabelClass = context.pollenLabel.replace(" ", "_");
+      context.guidanceBlocks = guidanceBlocks.pollen[context.pollenLabelClass];
     }
     return context;
   }
@@ -64,12 +70,14 @@ window.addEventListener("load", () => {
   }
 
   function pollenLabel(pollenValue) {
-    if (pollenValue >= 4 && pollenValue <= 6) {
+    if (pollenValue <= 3) {
+      return "low";
+    } else if (pollenValue <= 6) {
       return "moderate";
-    } else if (pollenValue >= 7) {
+    } else if (pollenValue <= 9) {
       return "high";
     } else {
-      return "low";
+      return "very high";
     }
   }
 

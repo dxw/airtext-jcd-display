@@ -39,7 +39,7 @@ test.describe("index page", () => {
       await page.goto("/");
       await page.waitForSelector("#hero-block");
       await expect(
-        page.getByText("Pollen levels are high today"),
+        page.getByText("Pollen levels are very high today"),
       ).toBeVisible();
     });
   });
