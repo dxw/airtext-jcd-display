@@ -44,6 +44,25 @@ $ yarn run build:js --watch
 $ yarn run serve
 ```
 
+Append `?dummy=scenario` to the URL to test the different scenarios. The following scenarios are available:
+
+- `normal` (i.e. low pollution and low pollen)
+- `veryHighPollutionToday`
+- `highPollutionToday`
+- `moderatePollutionToday`
+- `veryHighPollenToday`
+- `highPollenToday`
+- `moderatePollenToday`
+- `lowPollenToday`
+- `highPollutionTomorrow`
+- `moderatePollutionTomorrow`
+
+Append `?dummy=normal&info=template` to the URL to test the different info templates. The following templates are available:
+
+- `subscription-actionable`
+- `subscription-reflexive`
+- `educational`
+
 ### Testing
 
 To run the tests with Playwright, run:

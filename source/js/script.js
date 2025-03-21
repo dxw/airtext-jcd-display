@@ -2,18 +2,76 @@ import CercForecastApi from "./cerc_forecast_api";
 import guidanceBlocks from "../../data/health_guidance.json" with { type: "json" };
 import Handlebars from "handlebars";
 import QRCode from "qrcode";
+import dummyApiResponse from "../../tests/fixtures/api-response.json" with { type: "json" };
 
 window.addEventListener("load", () => {
   const api = new CercForecastApi();
   const zone = "Southwark";
 
-  api.getForecasts(zone).then((forecasts) => {
-    renderDisplay(forecasts);
-  });
+  // If the dummy query parameter is present, use the dummy data
+  const urlParams = new URLSearchParams(window.location.search);
+  const dummyScenario = urlParams.get("dummy");
+  const infoTemplate = urlParams.get("info");
 
-  function renderDisplay(forecasts) {
+  const dummyScenarios = {
+    normal: (forecasts) => forecasts,
+    veryHighPollutionToday: (forecasts) => {
+      forecasts[0].total_status = "VERY HIGH";
+      forecasts[0].total = 10;
+      return forecasts;
+    },
+    highPollutionToday: (forecasts) => {
+      forecasts[0].total_status = "HIGH";
+      forecasts[0].total = 8;
+      return forecasts;
+    },
+    moderatePollutionToday: (forecasts) => {
+      forecasts[0].total_status = "MODERATE";
+      forecasts[0].total = 6;
+      return forecasts;
+    },
+    veryHighPollenToday: (forecasts) => {
+      forecasts[0].pollen = 10;
+      return forecasts;
+    },
+    highPollenToday: (forecasts) => {
+      forecasts[0].pollen = 8;
+      return forecasts;
+    },
+    moderatePollenToday: (forecasts) => {
+      forecasts[0].pollen = 5;
+      return forecasts;
+    },
+    lowPollenToday: (forecasts) => {
+      forecasts[0].pollen = 2;
+      return forecasts;
+    },
+    highPollutionTomorrow: (forecasts) => {
+      forecasts[1].total_status = "HIGH";
+      forecasts[1].total = 8;
+      return forecasts;
+    },
+    moderatePollutionTomorrow: (forecasts) => {
+      forecasts[1].total_status = "MODERATE";
+      forecasts[1].total = 6;
+      return forecasts;
+    },
+  };
+
+  if (dummyScenario) {
+    const dummyForecasts = dummyScenarios[dummyScenario](
+      dummyApiResponse.zones[0].forecasts,
+    );
+    renderDisplay(dummyForecasts, infoTemplate);
+  } else {
+    api.getForecasts(zone).then((forecasts) => {
+      renderDisplay(forecasts);
+    });
+  }
+
+  function renderDisplay(forecasts, infoTemplate = "random") {
     if (forecasts) {
-      const template = getTemplate(forecasts);
+      const template = getTemplate(forecasts, infoTemplate);
       const context = setContext(
         {
           zone: zone,
@@ -30,7 +88,7 @@ window.addEventListener("load", () => {
     generateQRCode();
   }
 
-  function getTemplate(forecasts) {
+  function getTemplate(forecasts, infoTemplate) {
     const forecast_today = forecasts[0];
     const forecast_tomorrow = forecasts[1];
 
@@ -41,6 +99,10 @@ window.addEventListener("load", () => {
     } else if (forecast_today.pollen >= 4) {
       return "pollen-alert";
     } else {
+      if (infoTemplate != "random") {
+        return infoTemplate;
+      }
+
       // Randomly choose between subscription-actionable, subscription-reflexive, and educational
       const random = Math.floor(Math.random() * 3);
       switch (random) {
