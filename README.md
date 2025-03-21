@@ -2,12 +2,19 @@
 
 This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed to be used with a JCDecaux display board, but can be used in any settings that supports HTML and JavaScript.
 
-There are three templates, each defined in `index.html` as a Handlebars template:
+We fetch data from the CERC Forecast API and check it against some rules to determine which template (defined in `index.html` as Handlebars templates) to use.
 
-- **Alert** - for air pollution and pollen alerts
-- **Info** - for general information
+There are three dynamic templates triggered by specific rules. In priority order they are:
 
-We fetch data from the CERC Forecast API and check it against some rules to determine which template to use. If the API cannot be accessed or returns bad data, we fall back to the info template.
+- **Air pollution alert for today** - when there is an air pollution alert for today
+- **Air pollution alert for tomorrow** - when there is an air pollution alert for tomorrow (but not today)
+- **Pollen alert** - when there is a pollen alert for today
+
+When none of the conditions is met, or when the API cannot be accessed, we fall back to one of the three static info templates (picked randomly):
+
+- **Subscription actionable**
+- **Subscription reflexive**
+- **Educational**
 
 Everything happens in the client. There is intentionally no server-side code because the JCDecaux expects the board to be self-contained and the display to run in the browser. This means that the API key is exposed, but this is not a security risk for use with the JCDecaux display boards because they are not accessible to the public.
 
@@ -44,7 +51,7 @@ $ yarn run build:js --watch
 $ yarn run serve
 ```
 
-Append `?dummy=scenario` to the URL to test the different scenarios. The following scenarios are available:
+Append `?dummy=[scenario]` to the URL to test the different scenarios. The following scenarios are available:
 
 - `normal` (i.e. low pollution and low pollen)
 - `veryHighPollutionToday`
@@ -57,7 +64,7 @@ Append `?dummy=scenario` to the URL to test the different scenarios. The followi
 - `highPollutionTomorrow`
 - `moderatePollutionTomorrow`
 
-Append `?dummy=normal&info=template` to the URL to test the different info templates. The following templates are available:
+Append `?dummy=normal&info=[template]` to the URL to test the different info templates. The following templates are available:
 
 - `subscription-actionable`
 - `subscription-reflexive`
