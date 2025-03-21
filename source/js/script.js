@@ -8,44 +8,47 @@ window.addEventListener("load", () => {
   const zone = "Southwark";
 
   api.getForecasts(zone).then((forecasts) => {
+    renderDisplay(forecasts);
+  });
+
+  function renderDisplay(forecasts) {
     if (forecasts) {
-      const settings = getSettings(forecasts);
+      const template = getTemplate(forecasts);
       const context = setContext(
         {
           zone: zone,
-          date: day(settings.forecast, forecasts),
-          forecast: settings.forecast,
+          forecastToday: forecasts[0],
+          forecastTomorrow: forecasts[1],
         },
-        settings,
+        template,
       );
 
-      renderTemplate(settings.template, context);
+      renderTemplate(template, context);
     } else {
-      renderTemplate("subscription-actionable", {});
+      renderTemplate("subscription-actionable");
     }
     generateQRCode();
-  });
+  }
 
-  function getSettings(forecasts) {
+  function getTemplate(forecasts) {
     const forecast_today = forecasts[0];
     const forecast_tomorrow = forecasts[1];
 
     if (forecast_today.total_status !== "LOW") {
-      return { template: "air-pollution-alert", forecast: forecast_today };
+      return "air-pollution-alert";
     } else if (forecast_tomorrow.total_status !== "LOW") {
-      return { template: "air-pollution-alert", forecast: forecast_tomorrow };
-    } else if (forecast_today.pollen >= 4 && forecast_today.pollen <= 6) {
-      return { template: "pollen-alert", forecast: forecast_today };
-    } else if (forecast_today.pollen >= 7) {
-      return { template: "pollen-alert", forecast: forecast_today };
+      return "air-pollution-alert-tomorrow";
+    } else if (forecast_today.pollen >= 4) {
+      return "pollen-alert";
     } else {
-      return { template: "subscription-actionable", forecast: forecast_today };
+      return "subscription-actionable";
     }
   }
 
-  function setContext(context, settings) {
-    if (settings.template === "air-pollution-alert") {
-      context.airPollutionLabel = settings.forecast.total_status.toLowerCase();
+  function setContext(context, template) {
+    if (template === "air-pollution-alert") {
+      context.airPollutionLabel =
+        context.forecastToday.total_status.toLowerCase();
       context.airPollutionLabelClass = context.airPollutionLabel.replace(
         " ",
         "_",
@@ -53,8 +56,8 @@ window.addEventListener("load", () => {
       context.guidanceBlocks =
         guidanceBlocks.air_pollution[context.airPollutionLabelClass];
     }
-    if (settings.template === "pollen-alert") {
-      context.pollenLabel = pollenLabel(settings.forecast.pollen);
+    if (template === "pollen-alert") {
+      context.pollenLabel = pollenLabel(context.forecastToday.pollen);
       context.pollenLabelClass = context.pollenLabel.replace(" ", "_");
       context.guidanceBlocks = guidanceBlocks.pollen[context.pollenLabelClass];
     }
@@ -81,7 +84,7 @@ window.addEventListener("load", () => {
     }
   }
 
-  function renderTemplate(templateName, context) {
+  function renderTemplate(templateName, context = {}) {
     const source = document.getElementById(
       `${templateName}-template`,
     ).innerHTML;

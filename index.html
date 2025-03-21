@@ -14,8 +14,8 @@
         <img src="images/warning-triangle.svg" />
         <span>Air pollution is</span>
         <div id="alert-block" class="level-{{airPollutionLabelClass}}">
-          <div id="alert-primary">{{airPollutionLabel}} {{date}}</div>
-          <div id="alert-secondary">Index {{forecast.total}}/10</div>
+          <div id="alert-primary">{{airPollutionLabel}} today</div>
+          <div id="alert-secondary">Index {{forecastToday.total}}/10</div>
         </div>
         <span>in {{zone}}</span>
       </div>
@@ -51,7 +51,7 @@
         <img src="images/pollen.svg" />
         <span>Pollen levels are</span>
         <div id="alert-block" class="level-{{pollenLabelClass}}">
-          <div id="alert-primary">{{pollenLabel}} {{date}}</div>
+          <div id="alert-primary">{{pollenLabel}} today</div>
           <div id="alert-secondary">Grass, tree and weed grains</div>
         </div>
         <span>in {{zone}}</span>
