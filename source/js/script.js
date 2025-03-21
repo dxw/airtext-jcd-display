@@ -41,7 +41,16 @@ window.addEventListener("load", () => {
     } else if (forecast_today.pollen >= 4) {
       return "pollen-alert";
     } else {
-      return "subscription-actionable";
+      // Randomly choose between subscription-actionable, subscription-reflexive, and educational
+      const random = Math.floor(Math.random() * 3);
+      switch (random) {
+        case 0:
+          return "subscription-actionable";
+        case 1:
+          return "subscription-reflexive";
+        case 2:
+          return "educational";
+      }
     }
   }
 

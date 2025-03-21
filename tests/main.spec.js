@@ -62,7 +62,7 @@ test.describe("index page", () => {
   });
 
   test.describe("when there is no alert", () => {
-    test("should render the info template", async ({ page }) => {
+    test("should render one of the info templates", async ({ page }) => {
       const apiResponse = defaultApiResponse;
       apiResponse.zones[0].forecasts[0].total_status = "LOW";
       await stubApiResponse(page, apiResponse);
@@ -70,14 +70,19 @@ test.describe("index page", () => {
       await page.goto("/");
       await page.waitForSelector("#hero-block");
       await expect(
-        page.getByText("Sign up now to free air quality alerts"),
+        page
+          .getByText("Sign up now to free air quality alerts")
+          .or(page.getByText("The air you breathe matters"))
+          .or(page.getByText("Busy roads mean higher air pollution")),
       ).toBeVisible();
     });
   });
 
   // When the API returns an error
   test.describe("when the API returns an error", () => {
-    test("should render the info template", async ({ page }) => {
+    test("should render the subscription-actionable template", async ({
+      page,
+    }) => {
       await page.route(
         "https://london-airtext-forecasts-api-gateway-7x54d7qf.nw.gateway.dev/getforecast/all*",
         (route) => {
