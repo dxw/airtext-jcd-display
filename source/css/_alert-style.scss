@@ -20,7 +20,7 @@
     }
 
     div#alert-block {
-      margin: 0.5rem calc(-1 * var(--unit)) 0.5rem 0;
+      margin: 0.5rem calc(var(--unit) * -0.75) 0.5rem 0;
 
       div {
         &#alert-primary {
