@@ -28,7 +28,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.11.1",
     "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.13.14",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.0.0",
     "lodash.defaultsdeep": "^4.6.1",
