@@ -33,7 +33,7 @@
     "eslint-config-prettier": "^10.0.0",
     "lodash.defaultsdeep": "^4.6.1",
     "prettier": "^3.0.0",
-    "stylelint": "^16.0.0",
+    "stylelint": "^16.17.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0"
   },
