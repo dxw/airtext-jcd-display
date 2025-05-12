@@ -30,7 +30,7 @@
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.3",
     "eslint": "^9.26.0",
-    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-prettier": "^10.1.2",
     "lodash.defaultsdeep": "^4.6.1",
     "prettier": "^3.0.0",
     "stylelint": "^16.18.0",
