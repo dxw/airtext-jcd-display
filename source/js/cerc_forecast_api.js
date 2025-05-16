@@ -2,10 +2,13 @@ import { CERC_FORECAST_API_KEY } from "../../api-key";
 
 export default class CercForecastApi {
   getForecasts(zone) {
+    const headers = {
+      "Content-Type": "application/json",
+      "x-api-key": CERC_FORECAST_API_KEY,
+    };
     const query = {
       numdays: 2,
       zone: zone,
-      key: CERC_FORECAST_API_KEY,
     };
 
     const url = new URL(
@@ -13,7 +16,7 @@ export default class CercForecastApi {
     );
     url.search = new URLSearchParams(query).toString();
 
-    return fetch(url)
+    return fetch(url, { headers })
       .then((response) => response.json())
       .then((data) => {
         return data.zones.find((z) => z.zone_name === zone).forecasts;
