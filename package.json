@@ -15,7 +15,7 @@
     "build:css": "sass source/css/style.scss build/css/style.css --style compressed",
     "dev": "yarn run build:css --watch & yarn run build:js --watch & yarn run serve",
     "serve": "yarn run set-api-key && yarn run build && npx -y http-server",
-    "test": "yarn run set-api-key && yarn run build && playwright test",
+    "test": "yarn run set-api-key && yarn run build && yarn playwright install && yarn playwright test",
     "set-api-key": "scripts/set-api-key.sh"
   },
   "dependencies": {
