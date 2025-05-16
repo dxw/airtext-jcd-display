@@ -1,6 +1,6 @@
 # airTEXT JCDecaux Display Board
 
-This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed to be used with a JCDecaux display board, but can be used in any settings that supports HTML and JavaScript.
+This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed for a JCDecaux display board, but can be used in any setting that supports HTML and JavaScript.
 
 We fetch data from the CERC Forecast API and check it against some rules to determine which template (defined in `index.html` as Handlebars templates) to use.
 
@@ -30,7 +30,7 @@ scripts/set-api-key.sh
 Install the dependencies:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 To watch for changes in the SCSS files and compile them to CSS, run:
