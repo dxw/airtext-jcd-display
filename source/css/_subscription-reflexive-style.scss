@@ -1,7 +1,7 @@
 @use "variables";
 
 .subscription-reflexive-style {
-  padding: calc(var(--unit)) calc(var(--unit) * 0.75) calc(var(--unit) * 0.5);
+  padding: calc(var(--unit) * 6) calc(var(--unit) * 4.5) calc(var(--unit) * 3);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -9,11 +9,11 @@
   #hero-block {
     color: var(--main-colour-700);
     display: flex;
-    gap: calc(var(--unit) * 0.5);
-    margin-bottom: calc(var(--unit) * 0.75);
+    gap: calc(var(--unit) * 3);
+    margin-bottom: calc(var(--unit) * 4.5);
 
     #hero-text {
-      font-size: 8cqh;
+      font-size: calc(var(--unit) * 8);
       font-weight: bold;
 
       em {
@@ -24,11 +24,11 @@
   }
 
   #info-block {
-    font-size: 7cqh;
+    font-size: calc(var(--unit) * 7);
     line-height: 1.1;
     color: var(--main-colour-500);
     position: relative;
-    margin-bottom: calc(var(--unit) * 0.25);
+    margin-bottom: calc(var(--unit) * 1.5);
     flex-grow: 1;
 
     em {
@@ -37,30 +37,30 @@
     }
 
     #channel-icons {
-      margin-top: calc(var(--unit) * 0.5);
+      margin-top: calc(var(--unit) * 3);
 
       img {
-        width: calc(var(--unit) * 1.25);
-        height: calc(var(--unit) * 1.25);
+        width: calc(var(--unit) * 7.5);
+        height: calc(var(--unit) * 7.5);
       }
     }
 
     img.arrow {
       position: absolute;
       right: 0;
-      top: 4cqh; // ~half the height of the text
-      height: calc(100% - 4cqh);
+      top: calc(var(--unit) * 4); // ~half the height of the text
+      height: calc(100% - calc(var(--unit) * 4));
     }
   }
 
   #cta-block {
-    font-size: 3cqh;
+    font-size: calc(var(--unit) * 3);
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 
     #qr-code-block {
-      width: 12cqh;
+      width: calc(var(--unit) * 12);
 
       canvas {
         max-width: 100%;

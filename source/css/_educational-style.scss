@@ -1,7 +1,7 @@
 @use "variables";
 
 .educational-style {
-  padding: calc(var(--unit)) calc(var(--unit) * 0.75) calc(var(--unit) * 0.5);
+  padding: calc(var(--unit) * 6) calc(var(--unit) * 4.5) calc(var(--unit) * 3);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -12,22 +12,22 @@
     display: flex;
 
     #hero-text {
-      font-size: 6.75cqh;
+      font-size: calc(var(--unit) * 6.75);
       font-weight: bold;
       display: flex;
       flex-direction: column;
-      gap: var(--unit);
+      gap: calc(var(--unit) * 6);
     }
   }
 
   #cta-block {
     margin-top: auto;
-    padding-top: calc(var(--unit) * 0.25);
+    padding-top: calc(var(--unit) * 1.5);
     display: flex;
     flex-direction: row;
-    gap: calc(var(--unit) * 0.5);
+    gap: calc(var(--unit) * 3);
     justify-content: space-between;
-    border-top: 0.3cqh solid white;
+    border-top: calc(var(--unit) * 0.3) solid white;
 
     #cta-text-block {
       display: flex;
@@ -36,20 +36,20 @@
 
       #cta-text {
         display: block;
-        font-size: 2.5cqh;
+        font-size: calc(var(--unit) * 2.5);
         font-weight: bold;
         text-wrap: balance;
       }
 
       #cta-url {
         display: block;
-        margin-top: 1cqh;
-        font-size: 2.4cqh;
+        margin-top: calc(var(--unit) * 1);
+        font-size: calc(var(--unit) * 2.4);
       }
     }
 
     #qr-code-block {
-      width: 12cqh;
+      width: calc(var(--unit) * 12);
 
       canvas {
         max-width: 100%;

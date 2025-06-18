@@ -25,20 +25,20 @@ body {
 
   footer {
     display: flex;
-    height: 9cqh;
+    height: calc(var(--unit) * 9);
     max-height: 500px;
 
     > div {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      gap: calc(var(--unit) * 0.5);
+      gap: calc(var(--unit) * 3);
       box-sizing: border-box;
     }
 
     #airtext-logo-block {
       background: var(--main-colour-700);
-      padding: calc(var(--unit) * 0.25) calc(var(--unit) * 1);
+      padding: calc(var(--unit) * 1.5) calc(var(--unit) * 6);
       flex: 1;
 
       &.black-white {
@@ -48,7 +48,7 @@ body {
 
     #partner-logo-block {
       background: var(--main-colour-400);
-      padding: calc(var(--unit) * 0.25) calc(var(--unit) * 0.5);
+      padding: calc(var(--unit) * 1.5) calc(var(--unit) * 3);
       flex: 3;
 
       &.black-white {
