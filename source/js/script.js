@@ -1,3 +1,4 @@
+import config from "../../config/config.json" with { type: "json" };
 import CercForecastApi from "./cerc_forecast_api";
 import guidanceBlocks from "../../data/health_guidance.json" with { type: "json" };
 import Handlebars from "handlebars";
@@ -6,7 +7,7 @@ import dummyApiResponse from "../../tests/fixtures/api-response.json" with { typ
 
 window.addEventListener("load", () => {
   const api = new CercForecastApi();
-  const zone = "Southwark";
+  const zone = config.ZONE;
 
   // If the dummy query parameter is present, use the dummy data
   const urlParams = new URLSearchParams(window.location.search);
