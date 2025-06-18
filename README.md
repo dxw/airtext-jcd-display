@@ -1,6 +1,6 @@
 # airTEXT JCDecaux Display Board
 
-This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed for a JCDecaux display board, but can be used in any setting that supports HTML and JavaScript.
+This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed for a JCDecaux Roadside Digital 6-sheet display board (1080 x 1920), but can be used in any setting that supports HTML and JavaScript.
 
 We fetch data from the CERC Forecast API and check it against some rules to determine which template (defined in `index.html` as Handlebars templates) to use.
 
@@ -103,3 +103,7 @@ Run the build script:
 ```bash
 $ yarn run build
 ```
+
+### On JCDecaux display boards
+
+Remove the file `Procfile` from the root directory, as it is not needed for the JCDecaux display boards and will cause an error.
