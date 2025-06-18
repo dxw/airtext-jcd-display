@@ -9,8 +9,22 @@ window.addEventListener("load", () => {
   const api = new CercForecastApi();
   const zone = config.ZONE;
 
-  // If the dummy query parameter is present, use the dummy data
   const urlParams = new URLSearchParams(window.location.search);
+
+  // Rotate the display if set
+  if (config.ORIENTATION === "portrait") {
+    document.documentElement.style.setProperty("--rotation", "90deg");
+    document.documentElement.style.setProperty("--full-width", "100vh");
+    document.documentElement.style.setProperty("--full-height", "100vw");
+    document.documentElement.style.setProperty("--unit", "1cqw");
+  } else {
+    document.documentElement.style.setProperty("--rotation", "0deg");
+    document.documentElement.style.setProperty("--full-width", "100vw");
+    document.documentElement.style.setProperty("--full-height", "100vh");
+    document.documentElement.style.setProperty("--unit", "1cqh");
+  }
+
+  // If the dummy query parameter is present, use the dummy data
   const dummyScenario = urlParams.get("dummy");
   const infoTemplate = urlParams.get("info");
 
