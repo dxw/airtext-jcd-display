@@ -1,4 +1,4 @@
-import { CERC_FORECAST_API_KEY } from "../../api-key";
+import { CERC_FORECAST_API_KEY } from "../../config/api-key";
 
 export default class CercForecastApi {
   getForecasts(zone) {
