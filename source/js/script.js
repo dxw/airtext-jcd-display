@@ -42,10 +42,6 @@ window.addEventListener("load", () => {
       forecasts[0].pollen = 5;
       return forecasts;
     },
-    lowPollenToday: (forecasts) => {
-      forecasts[0].pollen = 2;
-      return forecasts;
-    },
     highPollutionTomorrow: (forecasts) => {
       forecasts[1].total_status = "HIGH";
       forecasts[1].total = 8;

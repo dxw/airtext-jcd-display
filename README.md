@@ -68,7 +68,6 @@ Append `?dummy=[scenario]` to the URL to test the different scenarios. The follo
 - `veryHighPollenToday`
 - `highPollenToday`
 - `moderatePollenToday`
-- `lowPollenToday`
 - `highPollutionTomorrow`
 - `moderatePollutionTomorrow`
 
