@@ -78,6 +78,8 @@ Append `?dummy=normal&info=[template]` to the URL to test the different info tem
 - `subscription-reflexive`
 - `educational`
 
+Examples of the screens shown for the scenarios can be found in the `screenshots` directory.
+
 ### Testing
 
 To run the tests with Playwright, run:
