@@ -101,9 +101,11 @@ $ yarn run lint:all:fix
 
 ## Deployment
 
-Set the API key as an environment variable.
+### Deploying to a server like Heroku
 
-Run the build script:
+Set the API key as an environment variable and ensure `scripts/set-api-key.sh` is run on deployment.
+
+Run the build script (this will be run automatically on Heroku):
 
 ```bash
 $ yarn run build
@@ -111,9 +113,18 @@ $ yarn run build
 
 ### Deploying to JCDecaux display boards
 
+Clone the repo and install the dependencies:
+
+```bash
+yarn install
+yarn run build
+```
+
 Remove the file `Procfile` from the root directory, as it is not needed for the JCDecaux display boards and will cause an error.
 
 Set the screen orientation in `config/config.js` to `portrait`.
+
+Set the API key in `config/api-key.json`.
 
 ## Updating the Node version
 
