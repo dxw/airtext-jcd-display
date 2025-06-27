@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   const urlParams = new URLSearchParams(window.location.search);
 
   // Rotate the display if set
-  if (config.ORIENTATION === "portrait") {
+  if (config.SCREEN_ORIENTATION === "portrait") {
     document.documentElement.style.setProperty("--rotation", "90deg");
     document.documentElement.style.setProperty("--full-width", "100vh");
     document.documentElement.style.setProperty("--full-height", "100vw");

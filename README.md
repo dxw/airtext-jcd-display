@@ -18,9 +18,9 @@ When none of the conditions is met, or when the API cannot be accessed, we fall 
 
 Everything happens in the client. There is intentionally no server-side code because the JCDecaux expects the board to be self-contained and the display to run in the browser. This means that the API key is exposed, but this is not a security risk for use with the JCDecaux display boards because they are not accessible to the public.
 
-## Configuring zone and orientation
+## Configuring zone and screen orientation
 
-The zone and orientation are defined in `config/config.js`. Changing the zone will change the forecast, but note that the logos will not change. The orientation is landscape by default, but should be set to `portrait` for JCDecaux boards.
+The zone and screen orientation are defined in `config/config.js`. Changing the zone will change the forecast, but note that the logos will not change. The screen orientation is landscape by default, but should be set to `portrait` for JCDecaux boards.
 
 ## Development
 
@@ -113,7 +113,7 @@ $ yarn run build
 
 Remove the file `Procfile` from the root directory, as it is not needed for the JCDecaux display boards and will cause an error.
 
-Set the orientation in `config/config.js` to `portrait`.
+Set the screen orientation in `config/config.js` to `portrait`.
 
 ## Updating the Node version
 
