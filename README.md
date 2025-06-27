@@ -114,3 +114,24 @@ $ yarn run build
 Remove the file `Procfile` from the root directory, as it is not needed for the JCDecaux display boards and will cause an error.
 
 Set the orientation in `config/config.js` to `portrait`.
+
+## Updating the Node version
+
+To update the Node version, update the version number in the following files:
+
+- `github/continuous-integration.yml`
+- `package.json`
+
+If you don't have that version of node installed, use `nvm` (Node Version
+Manager) to install it:
+
+```bash
+nvm install v22.13.1
+```
+
+You may also need to update yarn on your new node version:
+
+```bash
+  npm upgrade yarn
+  yarn install
+```
