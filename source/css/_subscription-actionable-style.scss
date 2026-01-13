@@ -13,7 +13,7 @@
     margin-bottom: calc(var(--unit) * 4.5);
 
     #hero-text {
-      font-size: calc(var(--unit) * 6.5);
+      font-size: calc(var(--unit) * 6);
       font-weight: bold;
 
       em {
@@ -36,12 +36,12 @@
   #info-block {
     font-size: calc(var(--unit) * 4.5);
     color: var(--main-colour-500);
-    margin-bottom: calc(var(--unit) * 4.5);
+    margin-bottom: calc(var(--unit) * 4);
     flex-grow: 1;
 
     ul {
       list-style-type: disc;
-      margin-left: calc(var(--unit) * 4.5);
+      margin-left: calc(var(--unit) * 3.5);
 
       li {
         margin-bottom: calc(var(--unit) * 3);
