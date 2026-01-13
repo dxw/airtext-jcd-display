@@ -8,6 +8,7 @@
     "lint:format:fix": "prettier --write '**/*'",
     "lint:js": "eslint .",
     "lint:js:fix": "yarn run lint:js --fix",
+    "lint:scripts": "for file in $(git ls-files scripts/*); do shellcheck -x \"$file\"; done",
     "lint:all:fix": "yarn run lint:js:fix && yarn run lint:css:fix && yarn run lint:format:fix",
     "heroku-prebuild": "yarn run set-api-key",
     "build": "yarn run build:js && yarn run build:css",
