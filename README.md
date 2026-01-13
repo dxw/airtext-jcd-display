@@ -113,18 +113,9 @@ $ yarn run build
 
 ### Deploying to JCDecaux display boards
 
-Clone the repo and install the dependencies:
-
-```bash
-yarn install
-yarn run build
-```
-
-Remove the file `Procfile` from the root directory, as it is not needed for the JCDecaux display boards and will cause an error.
-
-Set the screen orientation in `config/config.js` to `portrait`.
-
-Set the API key in `config/api-key.json`.
+1. Set the screen orientation in `config/config.js` to `portrait`.
+2. Set the API key in `config/api-key.json`.
+3. Run `./scripts/create-jcd-zip.sh` to create a zip file that can be uploaded to the JCDecaux display boards.
 
 ## Updating the Node version
 

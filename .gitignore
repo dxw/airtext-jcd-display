@@ -1,6 +1,7 @@
 /build
 /node_modules
 api-key.json
+/jcd-zip
 
 # Playwright
 /test-results/
