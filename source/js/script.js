@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
     renderDisplay(dummyForecasts, infoTemplate);
   } else {
     api.getForecasts(zone).then((forecasts) => {
-      renderDisplay(forecasts);
+      renderDisplay(forecasts, infoTemplate);
     });
   }
 
@@ -110,7 +110,7 @@ window.addEventListener("load", () => {
     } else if (forecast_today.pollen >= 4) {
       return "pollen-alert";
     } else {
-      if (infoTemplate != "random") {
+      if (infoTemplate && infoTemplate != "random") {
         return infoTemplate;
       }
 

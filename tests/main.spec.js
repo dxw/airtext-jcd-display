@@ -76,6 +76,38 @@ test.describe("index page", () => {
           .or(page.getByText("Busy roads mean higher air pollution")),
       ).toBeVisible();
     });
+
+    test("should render a specific info template when info parameter is provided", async ({
+      page,
+    }) => {
+      const apiResponse = defaultApiResponse;
+      apiResponse.zones[0].forecasts[0].total_status = "LOW";
+      await stubApiResponse(page, apiResponse);
+
+      await page.goto("/?info=educational");
+      await page.waitForSelector("#hero-block");
+      await expect(
+        page.getByText("Busy roads mean higher air pollution"),
+      ).toBeVisible();
+    });
+
+    test("should default to random template when info parameter is not provided", async ({
+      page,
+    }) => {
+      const apiResponse = defaultApiResponse;
+      apiResponse.zones[0].forecasts[0].total_status = "LOW";
+      await stubApiResponse(page, apiResponse);
+
+      await page.goto("/");
+      await page.waitForSelector("#hero-block");
+      // Should render one of the three info templates randomly
+      await expect(
+        page
+          .getByText("Sign up now to free air quality alerts")
+          .or(page.getByText("The air you breathe matters"))
+          .or(page.getByText("Busy roads mean higher air pollution")),
+      ).toBeVisible();
+    });
   });
 
   // When the API returns an error
