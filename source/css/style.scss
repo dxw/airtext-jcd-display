@@ -8,6 +8,7 @@
 
 html {
   transform: rotate(var(--rotation, 0deg));
+  background-color: white; // JCD displays otherwise default to black
 }
 
 body {
