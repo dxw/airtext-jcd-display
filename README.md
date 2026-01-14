@@ -2,6 +2,8 @@
 
 This is a simple display board that shows the airTEXT forecast for the next 24 hours. It is designed for a JCDecaux Roadside Digital 6-sheet display board (1080 x 1920), but can be used in any setting that supports HTML and JavaScript.
 
+At time of writing, the JCDecaux display boards run on Chromium 87, so this project targets that browser and cannot use some newer web features.
+
 We fetch data from the CERC Forecast API and check it against some rules to determine which template (defined in `index.html` as Handlebars templates) to use.
 
 There are three dynamic templates triggered by specific rules. In priority order they are:
