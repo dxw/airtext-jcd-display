@@ -16,12 +16,12 @@ window.addEventListener("load", () => {
     document.documentElement.style.setProperty("--rotation", "90deg");
     document.documentElement.style.setProperty("--full-width", "100vh");
     document.documentElement.style.setProperty("--full-height", "100vw");
-    document.documentElement.style.setProperty("--unit", "1cqw");
+    document.documentElement.style.setProperty("--unit", "1vw");
   } else {
     document.documentElement.style.setProperty("--rotation", "0deg");
     document.documentElement.style.setProperty("--full-width", "100vw");
     document.documentElement.style.setProperty("--full-height", "100vh");
-    document.documentElement.style.setProperty("--unit", "1cqh");
+    document.documentElement.style.setProperty("--unit", "1vh");
   }
 
   // If the dummy query parameter is present, use the dummy data
