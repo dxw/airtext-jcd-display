@@ -58,6 +58,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    gap: calc(var(--unit) * 2);
 
     #qr-code-block {
       width: calc(var(--unit) * 12);
