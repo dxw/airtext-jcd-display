@@ -7,8 +7,10 @@
 @use "educational-style";
 
 html {
-  transform: rotate(var(--rotation, 0deg));
+  transform: rotate(var(--rotation, 0deg)) translate(var(--translate-x, 0), 0);
+  transform-origin: top left;
   background-color: white; // JCD displays otherwise default to black
+  overflow: hidden;
 }
 
 body {

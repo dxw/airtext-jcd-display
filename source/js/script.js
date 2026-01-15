@@ -13,12 +13,14 @@ window.addEventListener("load", () => {
 
   // Rotate the display if set
   if (config.SCREEN_ORIENTATION === "portrait") {
-    document.documentElement.style.setProperty("--rotation", "90deg");
+    document.documentElement.style.setProperty("--rotation", "-90deg");
+    document.documentElement.style.setProperty("--translate-x", "-100vh");
     document.documentElement.style.setProperty("--full-width", "100vh");
     document.documentElement.style.setProperty("--full-height", "100vw");
     document.documentElement.style.setProperty("--unit", "1vw");
   } else {
     document.documentElement.style.setProperty("--rotation", "0deg");
+    document.documentElement.style.setProperty("--translate-x", "0");
     document.documentElement.style.setProperty("--full-width", "100vw");
     document.documentElement.style.setProperty("--full-height", "100vh");
     document.documentElement.style.setProperty("--unit", "1vh");
