@@ -8,7 +8,7 @@
     "lint:format:fix": "prettier --write '**/*'",
     "lint:js": "eslint .",
     "lint:js:fix": "yarn run lint:js --fix",
-    "lint:scripts": "for file in $(git ls-files scripts/*); do shellcheck -x \"$file\"; done",
+    "lint:scripts": "for file in $(git ls-files 'scripts/*.sh'); do shellcheck -x \"$file\"; done",
     "lint:all:fix": "yarn run lint:js:fix && yarn run lint:css:fix && yarn run lint:format:fix",
     "heroku-prebuild": "yarn run set-api-key",
     "build": "yarn run build:js && yarn run build:css",
@@ -17,6 +17,7 @@
     "dev": "yarn run build:css --watch & yarn run build:js --watch & yarn run serve",
     "serve": "yarn run set-api-key && yarn run build && npx -y http-server",
     "test": "yarn run set-api-key && yarn run build && yarn playwright install && yarn playwright test",
+    "screenshots": "yarn run build && node scripts/generate-screenshots.js",
     "jcd-zip": "scripts/generate-jcd-zip.sh",
     "set-api-key": "scripts/set-api-key.sh"
   },
