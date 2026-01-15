@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import defaultApiResponse from "./fixtures/api-response.json";
+import defaultApiResponse from "./fixtures/api-response.json" with { type: "json" };
 import defaultsDeep from "lodash.defaultsdeep";
 
 async function stubApiResponse(page, apiResponse) {

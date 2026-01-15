@@ -1,5 +1,6 @@
 {
   "name": "airtext-jcd-display",
+  "type": "module",
   "private": true,
   "scripts": {
     "lint:css": "npx stylelint \"source/**/*css\"",
