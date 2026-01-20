@@ -38,7 +38,7 @@
     "lodash.defaultsdeep": "4.6.1",
     "prettier": "3.8.0",
     "stylelint": "17.0.0",
-    "stylelint-config-standard": "39.0.1",
+    "stylelint-config-standard": "40.0.0",
     "stylelint-config-standard-scss": "16.0.0"
   },
   "engines": {
