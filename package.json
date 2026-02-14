@@ -32,7 +32,7 @@
     "@eslint/eslintrc": "3.3.3",
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.58.2",
-    "@types/node": "24.10.11",
+    "@types/node": "24.10.12",
     "eslint": "10.0.0",
     "eslint-config-prettier": "10.1.8",
     "lodash.defaultsdeep": "4.6.1",
@@ -42,7 +42,7 @@
     "stylelint-config-standard-scss": "17.0.0"
   },
   "engines": {
-    "node": "24.13.0"
+    "node": "24.13.1"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

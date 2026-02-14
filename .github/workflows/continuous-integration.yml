@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
-          node-version: "24.13.0"
+          node-version: "24.13.1"
       - name: Install dependencies
         run: yarn install
       - name: Run ESLint
@@ -46,7 +46,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
-          node-version: "24.13.0"
+          node-version: "24.13.1"
       - name: Install dependencies
         run: yarn install
       - name: Install Playwright Browsers
@@ -69,6 +69,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
-          node-version: "24.13.0"
+          node-version: "24.13.1"
       - name: Run Shellceck
         run: yarn run lint:scripts
