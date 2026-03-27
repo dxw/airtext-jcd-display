@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "esbuild": "^0.27.0",
-    "handlebars": "^4.7.8",
+    "handlebars": "^4.7.9",
     "qrcode": "^1.5.4",
     "sass": "^1.85.1"
   },
