@@ -33,7 +33,7 @@
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.59.1",
     "@types/node": "24.12.2",
-    "eslint": "10.2.0",
+    "eslint": "10.2.1",
     "eslint-config-prettier": "10.1.8",
     "lodash.defaultsdeep": "4.6.1",
     "prettier": "3.8.3",
